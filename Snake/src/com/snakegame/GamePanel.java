@@ -35,7 +35,7 @@ public class GamePanel extends JPanel implements ActionListener{
 		this.setBackground(Color.black);
 		this.setFocusable(true);
 		this.addKeyListener(new MyKeyAdapter());
-		startGame();
+//		startGame();
 	}
 	
 	public void startGame() {
@@ -43,6 +43,7 @@ public class GamePanel extends JPanel implements ActionListener{
 		running = true;
 		timer = new Timer(DELAY,this);
 		timer.start();
+		this.requestFocusInWindow();
 	}
 	
 	public void paintComponent(Graphics g) {
